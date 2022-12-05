@@ -10,17 +10,17 @@ import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (    
-    <Home />
-    // <HashRouter>
-    //   <ScrollToTop />
-    //   <Routes>
-    //     <Route path="/" element={<Home />} />
-    //     <Route path="/craigslist-redesign" element={<Craigslist />} />
-    //     <Route path="/discz-design" element={<Discz />} />
-    //     <Route path="/valorant-shop" element={<Valorant />} />
-    //     <Route path="/snackpass-interface-review" element={<Snackpass />} />
-    //   </Routes>
-    // </HashRouter>
+    // <Home />
+    <HashRouter>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/craigslist-redesign" element={<Craigslist />} />
+        <Route path="/discz-design" element={<Discz />} />
+        <Route path="/valorant-shop" element={<Valorant />} />
+        <Route path="/snackpass-interface-review" element={<Snackpass />} />
+      </Routes>
+    </HashRouter>
   );
 }
 
