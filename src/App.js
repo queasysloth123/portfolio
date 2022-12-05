@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as HashRouter, Route, Routes } from "react-router-dom";
 
 import Home from './pages/Home'
 import Craigslist from './pages/Craigslist'
@@ -9,8 +9,9 @@ import Snackpass from './pages/Snackpass';
 import ScrollToTop from './components/ScrollToTop';
 
 function App() {
-  return (
-    <Router>
+  return (    
+    // <Home />
+    <HashRouter>
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -19,7 +20,7 @@ function App() {
         <Route path="/valorant-shop" element={<Valorant />} />
         <Route path="/snackpass-interface-review" element={<Snackpass />} />
       </Routes>
-    </Router>
+    </HashRouter>
   );
 }
 
