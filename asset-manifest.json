@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.69f4678e.css",
-    "main.js": "/portfolio/static/js/main.90b407ff.js",
+    "main.js": "/portfolio/static/js/main.060c554d.js",
     "static/media/hifi-desktop.png": "/portfolio/static/media/hifi-desktop.e2bfa239e51fcbbfc7e5.png",
     "static/media/craigslist-original.png": "/portfolio/static/media/craigslist-original.00dacf8d1d5745a5d4eb.png",
     "static/media/proj3.png": "/portfolio/static/media/proj3.f0adfa82eefb175bcd9e.png",
@@ -68,10 +68,10 @@
     "static/media/filters3.png": "/portfolio/static/media/filters3.756b884ebc7a9144a846.png",
     "index.html": "/portfolio/index.html",
     "main.69f4678e.css.map": "/portfolio/static/css/main.69f4678e.css.map",
-    "main.90b407ff.js.map": "/portfolio/static/js/main.90b407ff.js.map"
+    "main.060c554d.js.map": "/portfolio/static/js/main.060c554d.js.map"
   },
   "entrypoints": [
     "static/css/main.69f4678e.css",
-    "static/js/main.90b407ff.js"
+    "static/js/main.060c554d.js"
   ]
 }
