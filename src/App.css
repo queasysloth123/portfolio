@@ -1,38 +1,294 @@
-.App {
-  text-align: center;
+body {
+  background-color: #181818;
+  color: rgb(215, 215, 215);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+a {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+a:hover {
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+li{
+  margin: 10px 0;
+}
+
+p, li {
+  color: rgb(167, 167, 167);
+}
+
+.Landing-Section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Landing-Section h1 {
+  margin: 0;
+  font-size: calc(2rem + 3vw);
+  font-weight: 500;
+}
+
+.Landing-Section h3 {
+  font-size: calc(0.5rem + 2vw);
+  font-weight: 300;
+}
+
+.Welcome-Msg {
+  text-align: center;
+}
+
+.Projects-Section {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  padding-bottom: 100px;
+}
+
+.Projects-Section h1 {
+  margin-top: 100px;
+  font-size: calc(0.5rem + 3vw);
+  font-weight: 400;
+}
+
+.ProjectPreview {
+  width: 80vw;
+  max-width: 800px;
+  position: relative;
+}
+
+.ProjectPreview img{
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+  /* border-radius: calc(0.5rem + 1vw);; */
+}
+
+.ProjectPreview:hover img {
+  transform: scale(1.01);
+  transform-origin: 50% 50%;
+  /* opacity: 50%; */
+  cursor: pointer;
+}
+
+.NavBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100vw;
+  background-color: #181818;
+  height: 70px;
+  top:0
+}
+
+.NavBar h1{
+  margin: 0;
+  font-weight: 400;
+}
+
+.BackIcon {
+  position: absolute;
+    left: 30px;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.ProjectBody {
+  margin-top: 70px;
+  width: 80vw;
+  padding-top: 50px;
+}
+
+.ProjectBody img{
+  width: 100%;
+}
+
+
+.ProjectBody h1 {
+  font-weight: 500;
+}
+
+.ProjectTemplate {
+  display: flex;
+  justify-content: center;
+}
+
+.ProjectSection {
+  margin: 100px 0;
+}
+
+.Issues {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  align-items: center;
+}
+
+.Issues ol {
+  width: 50%;
+}
+
+.IssuesImage {
+  width: 50%;
+  min-width: 400px;
+}
+.IssuesImage img{
+  width: 100%;
+}
+
+.Feedback {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  align-items: flex-start;
+  
+}
+
+.section-content {
+  width: 50%;
+}
+
+
+.LoFiImgs, .HiFiImgs{
+  display: flex;
+  width: 100%;
+  height: 500px;
+  gap: 40px;
+  overflow: scroll;
+}
+
+.Discz .LoFiImgs, .Discz .HiFiImgs{ 
+  height: 350px;
+}
+
+.LoFiImgs img, .HiFiImgs img{
+  height: 100%;
+  width: auto;
+}
+
+.SectionHeader {
+  width: 100vw;
+  background-color: rgb(80 200 170);
+  color: #181818;
+  padding: 5px 0;
+  text-align: center;
+}
+
+.Discz {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ImgCaptionWrapper {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.ImageCaption {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  text-align: center;
+  width: 500px;
+}
+
+.ImgCaptionImg{
+  min-width: 225px;
+  width: 225px;
+}
+
+.ImgCaptionImg img{
+  width: 100%;
+}
+
+.InterviewSummary .ImageCaption{
+  width: 100%;
+  align-items: flex-start;
+}
+
+.ListSplit{
+  width: 50%;
+}
+
+.PersonaImg {
+  width: 30%;
+ min-width: 200px;
+}
+.PersonaWrapper {
+  align-items: center !important;
+}
+
+.Storyboard{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.SBFrame {
+  width: 200px;
+  /* background-color: white; */
+  padding: 20px;
+  margin: 10px;
+}
+.Kiosk {
+  width: 100%;
+  justify-content: center;
+}
+.KiosImg {
+  width: 300px;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .Projects-Section {
+    gap: 30px;
   }
-  to {
-    transform: rotate(360deg);
+  .ProjectPreview {
+    width: calc(100vw - 40px);
+  }
+  .ImageCaption {
+    flex-direction: column;
+    width: 100%;
+    gap: 0px;
+    margin: 20px 0;
+  }
+  .ListSplit{
+    width: 100%;
+  }
+
+  .PersonaImg {
+    width: 70%;
+  }
+}
+
+.DisczLofi .LoFiImgs{
+  height: 200px;
+  /* background-color: white; */
+}
+
+@media only screen and (max-width: 900px) {
+  .Issues, .Feedback {
+    flex-direction: column;
+  }
+
+  .Issues ol {
+    width: 100%;
+  }
+  
+  .IssuesImage {
+    width: 100%;
+  }
+  
+  .section-content {
+    width: 100%;
   }
 }

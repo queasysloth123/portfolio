@@ -1,24 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
+import Home from './pages/Home'
+import Craigslist from './pages/Craigslist'
+import Discz from './pages/Discz';
+import Valorant from './pages/Valorant';
+import Snackpass from './pages/Snackpass';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/craigslist-redesign" element={<Craigslist />} />
+        <Route path="/discz-design" element={<Discz />} />
+        <Route path="/valorant-shop" element={<Valorant />} />
+        <Route path="/snackpass-interface-review" element={<Snackpass />} />
+      </Routes>
+    </Router>
   );
 }
 
