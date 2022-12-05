@@ -89,6 +89,36 @@ function Valorant() {
           </div>
         </div>
 
+        <div class="ProjectSection">
+          <h1>Component Architecture</h1>
+          <h3>How Data is Passed Down Through Components</h3>
+          <p> 
+            <b>Filters</b> takes in <b>weaponData</b> because it needs access to all weapon information in order to sort and filter.  <b>Filters</b> also takes in <b>itemsToDisplay</b>, and <b>setItemsToDisplay</b> to read and modify what and how items should be shown on the page.</p>
+            <ul>
+              <li><b>SortBy</b> takes in <b>sortBy</b> and <b>changeSortBy</b></li>
+              <li><b>PriceRange</b> takes in <b>costRange</b> and <b>changeCostRange</b></li>
+              <li><b>Categories</b> takes in <b>checkedCategories</b> and <b>changeCheckedCategories</b></li>
+            </ul>
+          <p>
+            In addition to its basic information, <b>WeaponItem</b> also takes in an <b>addItem</b> function, which gives the buy button for each weapon card functionality.
+          </p>
+          <p>
+          Similarly, <b>CartItem</b> takes in basic information of the weapon added to the cart. I also pass in an <b>incItem</b> and <b>decItem</b> to increase and decrease the quantity values of any item in the cart.
+          </p>
+        </div>
+
+        <div class="ProjectSection">
+          <h1>States</h1>
+          <h3>How the User Triggers State Changes</h3>
+          <p> 
+          <b>sortBy</b> is a state that keeps track of what the shopping list of weapons are currently being sorted by, such as name, price, category, and fire rate. Since the items can only be sorted by one type at a time, I only used one variable, which is triggered by the checking of the radio buttons under the Sort By category.
+          </p>
+          <p><b>itemsToDisplay</b> is an array of all the purchasable weapons and its basic info that keeps track of their sorted order, which changes accordingly when any of the following states are changed: <b>sortBy</b>, <b>costRange</b> and <b>checkedCategories</b>. <b>itemsToDisplay</b> is used to display the weapons in the shopping list in a specific order.</p>
+          <p><b>costRange</b> is a state that keeps track of the price range filter. This state has two values, which correspond to the minimum and maximum prices of the weapons that the user wants to view. This array of values are triggered by moving both sliders of the slider input under the Price Range section.</p>
+          <p><b>checkedCategories</b> is an object state that keeps track of all weapon categories and whether or not it is checked in the filters section. It's structured such that the key is the category name and its value is a boolean that corresponds to the the checked state of its checkbox.</p>
+          <p>The <b>cart</b> state is a dictionary keeps track of the items that are currently in the cart, where its key is the item name and the value is its count. This is triggered when the user clicks "BUY" on a weapon card or if the user clicks the add and minus buttons in the shopping cart.</p>
+          <p>The <b>total</b> state is an integer that keeps track of the total price of the cart items (aggregate). This state is triggered the ways that <b>cart</b> is triggered (mentioned above).</p>
+        </div>
 
         <div class="ProjectSection">
           <h1>Conclusion</h1>
