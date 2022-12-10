@@ -11,18 +11,15 @@ import filters4 from '../imgs/valorant/filters4.png'
 
 import itemCard from '../imgs/valorant/itemcard.png'
 import cart from '../imgs/valorant/cart.png'
-
+import NavBar from '../components/NavBar';
+import ViewProjBtn from '../components/ViewProjBtn';
+import Fade from 'react-reveal/Fade';
 function Valorant() {
   return (
     <div className="Valorant ProjectTemplate">
-      <div className="NavBar">
-        <Link to="/">
-          <FontAwesomeIcon className="BackIcon" icon={faChevronLeft} size="xl" />
-        </Link>
-        <h1>Name</h1>
-      </div>
+      <NavBar/>
+      <Fade bottom><img src={headerImg} className="ProjectHeaderImg"></img></Fade>
       <div className='ProjectBody'>
-        <img src={headerImg}></img>
         <div class="ProjectSection">
           <h1>Project Overview</h1>
           <p>
@@ -45,8 +42,8 @@ function Valorant() {
           </p>
           <div className="ImgCaptionWrapper">
             <div className='ImageCaption'>
-              <div class="ImgCaptionImg"><img src={itemCard}></img></div>
-              <p>Each item should display its necessary information (image, name, category, fire rate, and price) along with a <b>BUY</b> button.</p>
+              <div class="ImgCaptionImg"><Fade left><img src={itemCard}></img></Fade></div>
+              <Fade right><p>Each item should display its necessary information (image, name, category, fire rate, and price) along with a <b>BUY</b> button.</p></Fade>
             </div>
           </div>
           <br></br>
@@ -60,18 +57,19 @@ function Valorant() {
 
           <div className="ImgCaptionWrapper">
             <div className='ImageCaption'>
-              <div class="ImgCaptionImg"><img src={filters2}></img></div>
-              <p><b>Sort By</b> utilizes radio buttons since data should only be sorted by one category at a time.</p>
+              <div class="ImgCaptionImg"><Fade left><img src={filters2}></img></Fade></div>
+              <Fade right> <p><b>Sort By</b> utilizes radio buttons since data should only be sorted by one category at a time.</p></Fade>
+             
             </div>
 
             <div className='ImageCaption'>
-              <div class="ImgCaptionImg"><img src={filters3}></img></div>
-              <p><b>Price Range</b> is dictated by a two-pointer slider to define both the minimum and maximum prices to display.</p>
+              <div class="ImgCaptionImg"><Fade left><img src={filters3}></img></Fade></div>
+              <Fade right><p><b>Price Range</b> is dictated by a two-pointer slider to define both the minimum and maximum prices to display.</p></Fade>
             </div>
 
             <div className='ImageCaption'>
-              <div class="ImgCaptionImg"><img src={filters4}></img></div>
-              <p><b>Categories</b> uses checkboxes for determining what type of weapon should be shown on the site.</p>
+              <div class="ImgCaptionImg"><Fade left><img src={filters4}></img></Fade></div>
+              <Fade right><p><b>Categories</b> uses checkboxes for determining what type of weapon should be shown on the site.</p></Fade>
             </div>
           </div>
           <br></br>
@@ -80,11 +78,13 @@ function Valorant() {
           <p>The shopping car is conveniently placed right below the filters to minimize number of side panels. </p>
           <div className="ImgCaptionWrapper">
             <div className='ImageCaption'>
-              <div class="ImgCaptionImg"><img src={cart}></img></div>
+              <div class="ImgCaptionImg"><Fade left><img src={cart}></img></Fade></div>
+              <Fade right>
               <div>
                 <p> I used the card concept to represent each item in the shopping cart, which contains its image, name, and unit price, and quantity. </p>
                 <p> I gave users the ability to change the quantity of each cart item as well as the ability to clear their cart for convenience. </p>
               </div>
+              </Fade>
             </div>
           </div>
         </div>
@@ -118,6 +118,7 @@ function Valorant() {
           <p><b>checkedCategories</b> is an object state that keeps track of all weapon categories and whether or not it is checked in the filters section. It's structured such that the key is the category name and its value is a boolean that corresponds to the the checked state of its checkbox.</p>
           <p>The <b>cart</b> state is a dictionary keeps track of the items that are currently in the cart, where its key is the item name and the value is its count. This is triggered when the user clicks "BUY" on a weapon card or if the user clicks the add and minus buttons in the shopping cart.</p>
           <p>The <b>total</b> state is an integer that keeps track of the total price of the cart items (aggregate). This state is triggered the ways that <b>cart</b> is triggered (mentioned above).</p>
+          <ViewProjBtn bg="#EB565B" color="white" link="https://queasysloth123.github.io/development/"/>
         </div>
 
         <div class="ProjectSection">

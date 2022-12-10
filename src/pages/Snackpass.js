@@ -20,18 +20,15 @@ import sb9 from '../imgs/snackpass/Sb9.png'
 import sb10 from '../imgs/snackpass/Sb10.png'
 import sb11 from '../imgs/snackpass/Sb11.png'
 
-
+import NavBar from '../components/NavBar';
+import ViewProjBtn from '../components/ViewProjBtn';
+import Fade from 'react-reveal/Fade';
 function Snackpass() {
   return (
     <div className="Snackpass ProjectTemplate">
-      <div className="NavBar">
-        <Link to="/">
-          <FontAwesomeIcon className="BackIcon" icon={faChevronLeft} size="xl" />
-        </Link>
-        <h1>Name</h1>
-      </div>
+      <NavBar/>
+      <Fade bottom><img src={headerImg} className="ProjectHeaderImg"></img></Fade>
       <div className='ProjectBody'>
-        <img src={headerImg}></img>
         <div class="ProjectSection">
           <h1>Project Overview</h1>
           <p>
@@ -45,8 +42,9 @@ function Snackpass() {
           <p>Snackpass's kiosk offers a simple touch-screen interface for customers to place their orders without having to wait in line and talk to a cashier.</p>
           <div className="ImgCaptionWrapper">
             <div className='ImageCaption Kiosk'>
-              <div class="ImgCaptionImg KiosImg"><img src={kiosk}></img></div>
+              <div class="ImgCaptionImg KiosImg"><Fade left><img src={kiosk}></img></Fade></div>
               <div style={{ textAlign: "left" }}>
+                <Fade right>
                 <h3>How to use</h3>
                 <ol style={{ paddingLeft: "20px" }}>
                   <li>Tap to start order</li>
@@ -56,6 +54,7 @@ function Snackpass() {
                   <li>Continue to checkout</li>
                   <li>Pay and wait for order</li>
                 </ol>
+                </Fade>
               </div>
             </div>
           </div>
@@ -78,6 +77,7 @@ function Snackpass() {
           <div className="ImgCaptionWrapper InterviewSummary" >
             <div className='ImageCaption'>
               <div style={{ textAlign: "left" }} className="ListSplit">
+              <Fade left>
                 <h3>Questions Asked</h3>
                 <ol style={{ paddingLeft: "20px" }}>
                   <li>Why do you use the self-severing kiosk?</li>
@@ -86,8 +86,10 @@ function Snackpass() {
                   <li>How does it feel to place your order without a cashier?</li>
                   <li>How do you feel about the layout of the kiosk?</li>
                 </ol>
+                </Fade>
               </div>
               <div style={{ textAlign: "left" }} className="ListSplit">
+                <Fade right>
                 <h3>Responses</h3>
                 <ol style={{ paddingLeft: "20px" }}>
                   <li>Customers often prefer ordering on the Snackpass kiosk because there is no line, no pressure, and it is easy to navigate.</li>
@@ -96,6 +98,7 @@ function Snackpass() {
                   <li>People feel like they are missing the social interaction that comes with ordering from a cashier.</li>
                   <li>The menu items are too big, which can make scrolling though all the options overwhelming.</li>
                 </ol>
+                </Fade>
               </div>
             </div>
           </div>
@@ -106,28 +109,37 @@ function Snackpass() {
           <p> I constructed two personas by creating a four-quadrant empathy map, describing what users think, feel, say, and do for one archetypal character ​that will represent part of the spectrum of observed users.</p>
           <div className="ImgCaptionWrapper InterviewSummary" >
             <div className='ImageCaption PersonaWrapper'>
+              
               <div className="ListSplit PersonaImg">
+              <Fade left>
                 <h3>Indecisive Irene</h3>
                 <img src={persona1}></img>
+                </Fade>
               </div>
+              <Fade right>
               <div className="ListSplit PersonaCaption">
                 <p>
                   Irene is a college student who likes to try new things. She decides to try boba for the first time and orders with Snackpass's kiosk. She proceeds to look through all the menu items, but the icons are too big and take up a lot of space, making the menu feel more overwhelming than it actually is. She also has dietary restrictions and wishes for a way to filter the menu or at least see common allergenic ingredients in each menu item before proceeding to select toppings/sides. Because Irene is taking to long to choose her order, the kiosk times out and terminates her session. Irene tries again, and ends up getting brown sugar boba with soy milk.
                 </p>
               </div>
+              </Fade>
             </div>
           </div>
           <div className="ImgCaptionWrapper InterviewSummary" >
             <div className='ImageCaption PersonaWrapper'>
               <div className="ListSplit PersonaImg">
+              <Fade left>
                 <h3>Consistent Cory</h3>
                 <img src={persona2}></img>
+                </Fade>
               </div>
+              <Fade right>
               <div className="ListSplit PersonaCaption">
               <p>
               Cory is a college student who doesn't like to try new things. He decides to get boba again for the 2nd time today before going to his next class. He sees the long line to the cashier and becomes worried that he won't get his drink in time. He, instead, orders on Snackpass's kiosk, selecting the first item on the menu. He pays for his drink, and is offered a discount if he enters his phone number. He is disappointed that he link it to his Snackpass account because he is one gift away from hatching an egg with his friend. He enters his number, but his order fails to go through. Cory is upset, tries again, and successfully orders his drink.
             </p>
               </div>
+              </Fade>
             </div>
           </div>
         </div>
@@ -136,6 +148,7 @@ function Snackpass() {
           <h1>Storyboard</h1>
           <p>I decided to create a storyboard for Cory to showcase his boba-buying journey using the Snackpass self-ordering kiosk.</p>
           <div className="Storyboard">
+            <Fade bottom>
             <div className="SBFrame">
               <img src={sb1}></img>
               <p>Cory realizes that he's thirsty for a drink during in class.</p>
@@ -180,7 +193,9 @@ function Snackpass() {
               <img src={sb11}></img>
               <p>Joe gets his drink in less than 2 minutes, skipping the long line, and walks to his next class.</p>
             </div>
+            </Fade>
           </div>
+          <ViewProjBtn bg="#5DCBFA" color="white" txt="See More" link="https://queasysloth123.github.io/personas-and-storyboarding/"/>
         </div>
 
         <div class="ProjectSection">
